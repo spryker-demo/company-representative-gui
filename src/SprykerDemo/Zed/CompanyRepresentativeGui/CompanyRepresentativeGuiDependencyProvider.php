@@ -15,7 +15,7 @@ class CompanyRepresentativeGuiDependencyProvider extends AbstractBundleDependenc
     /**
      * @var string
      */
-    public const FACADE_CUSTOMER_REPRESENTATIVE = 'FACADE_CUSTOMER_REPRESENTATIVE';
+    public const FACADE_COMPANY_REPRESENTATIVE = 'FACADE_COMPANY_REPRESENTATIVE';
 
     /**
      * @var string
@@ -29,7 +29,7 @@ class CompanyRepresentativeGuiDependencyProvider extends AbstractBundleDependenc
      */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
-        $container = $this->addCustomerRepresentativeFacade($container);
+        $container = $this->addCompanyRepresentativeFacade($container);
         $container = $this->addUserQueryContainer($container);
 
         return $container;
@@ -40,10 +40,10 @@ class CompanyRepresentativeGuiDependencyProvider extends AbstractBundleDependenc
      *
      * @return \Spryker\Zed\Kernel\Container
      */
-    public function addCustomerRepresentativeFacade(Container $container): Container
+    public function addCompanyRepresentativeFacade(Container $container): Container
     {
-        $container->set(static::FACADE_CUSTOMER_REPRESENTATIVE, function (Container $container) {
-            return $container->getLocator()->customerRepresentative()->facade();
+        $container->set(static::FACADE_COMPANY_REPRESENTATIVE, function (Container $container) {
+            return $container->getLocator()->companyRepresentative()->facade();
         });
 
         return $container;
