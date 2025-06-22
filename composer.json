@@ -7,7 +7,7 @@
         "php": ">=8.2",
         "spryker-demo/company-representative": "^1.0.0",
         "spryker/company-gui-extension": "^1.0.0",
-        "spryker/kernel": "^3.70.0",
+        "spryker/kernel": "^3.75.0",
         "spryker/symfony": "^3.11.1",
         "spryker/user": "^3.14.1"
     },
